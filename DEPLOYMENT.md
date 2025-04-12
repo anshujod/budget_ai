@@ -1,45 +1,44 @@
-# BudgetAI - Deployment Guide
+# Deployment Guide for BudgetAI
 
-This document provides instructions for deploying the BudgetAI app to both development and production environments.
+This document provides step-by-step instructions to deploy the BudgetAI mobile application for development, testing, and production (publishing to app stores).
+
+---
+
+## Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [Environment Setup](#environment-setup)
+- [Running Locally (Development)](#running-locally-development)
+- [Building for Production](#building-for-production)
+- [Publishing to App Stores](#publishing-to-app-stores)
+- [Environment Variables](#environment-variables)
+- [Troubleshooting](#troubleshooting)
+- [References](#references)
+
+---
 
 ## Prerequisites
 
-Before deploying, ensure you have the following installed:
-- Node.js (v16 or higher)
-- npm or yarn
-- Expo CLI (`npm install -g expo-cli`)
-- EAS CLI (`npm install -g eas-cli`)
-- An Expo account (create one at https://expo.dev/signup)
+- **Node.js** (v16 or later recommended)
+- **npm** (v7 or later) or **yarn**
+- **Expo CLI** (if using Expo)
+- **Git**
+- **Android Studio** (for Android builds/emulator)
+- **Xcode** (for iOS builds/simulator, macOS only)
+- Accounts for [Google Play Console](https://play.google.com/console/) and [Apple Developer](https://developer.apple.com/account/) (for publishing)
 
-## Development Deployment
+---
 
-To run the app in development mode:
+## Environment Setup
 
-1. Clone the repository
-```
-git clone https://github.com/yourusername/budget-ai.git
-cd budget-ai
-```
+1. **Clone the repository:**
+   ```sh
+   git clone <REPO_URL>
+   cd BudgetAI-delivery
+   ```
 
-2. Install dependencies
-```
-npm install
-```
-
-3. Start the development server
-```
-npx expo start
-```
-
-4. Use the Expo Go app on your device to scan the QR code, or press 'a' to open on an Android emulator or 'i' for iOS simulator.
-
-## Production Deployment
-
-### Setting up EAS Build
-
-1. Log in to your Expo account
-```
-eas login
+2. **Install dependencies:**
+   ```sh
 ```
 
 2. Configure the project

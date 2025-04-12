@@ -28,10 +28,8 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "extra": {
-      "eas": {
-        "projectId": "budget-ai-project"
-      }
+    "updates": {
+      "enabled": false
     },
     "plugins": [
       [

@@ -17,15 +17,15 @@ const { width, height } = Dimensions.get('window');
 
 const slides = [
   {
-    id: '1',
-    title: 'Track your expenses effortlessly',
-    description: 'Easily log and categorize your spending with just a few taps. Connect your accounts for automatic tracking.',
-    image: require('../../assets/onboarding1.png'),
+    id: '1', // Corrected id
+    title: 'Welcome to BudgetAI', // Corrected title
+    description: 'Track your expenses effortlessly and gain clarity on your spending habits.', // Corrected description
+    image: require('../../assets/onboarding1.png'), // Corrected image
   },
   {
     id: '2',
     title: 'Set and achieve your savings goals',
-    description: 'Create personalized savings goals and track your progress. We'll help you stay on target.',
+    description: 'Create personalized savings goals and track your progress. We\'ll help you stay on target.', // Added comma
     image: require('../../assets/onboarding2.png'),
   },
   {
