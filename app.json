@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "BudgetAI",
+    "slug": "budget-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#5D5FEF"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.budgetai.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#5D5FEF"
+      },
+      "package": "com.budgetai.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "budget-ai-project"
+      }
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#5D5FEF"
+        }
+      ]
+    ],
+    "description": "AI-powered budgeting app that helps users track expenses, set savings goals, and receive personalized financial insights.",
+    "githubUrl": "https://github.com/yourusername/budget-ai"
+  }
+}
