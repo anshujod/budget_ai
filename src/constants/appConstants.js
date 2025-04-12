@@ -39,6 +39,8 @@ export const ROUTES = {
   NOTIFICATIONS: 'Notifications',
   ACHIEVEMENTS: 'Achievements',
   COMMUNITY: 'Community',
+  FIRE_QUESTIONNAIRE: 'FIREQuestionnaire',
+  FIRE_RECOMMENDATIONS: 'FIRERecommendations',
 };
 
 // Expense categories

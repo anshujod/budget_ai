@@ -17,28 +17,28 @@ const { width, height } = Dimensions.get('window');
 
 const slides = [
   {
-    id: '1', // Corrected id
-    title: 'Welcome to BudgetAI', // Corrected title
-    description: 'Track your expenses effortlessly and gain clarity on your spending habits.', // Corrected description
-    image: require('../../assets/onboarding1.png'), // Corrected image
+    id: '1',
+    title: 'Welcome to BudgetAI',
+    description: 'Track your expenses effortlessly and gain clarity on your spending habits.',
+    image: require('../../../assets/onboarding4.png'),
   },
   {
     id: '2',
     title: 'Set and achieve your savings goals',
-    description: 'Create personalized savings goals and track your progress. We\'ll help you stay on target.', // Added comma
-    image: require('../../assets/onboarding2.png'),
+    description: 'Create personalized savings goals and track your progress. We\'ll help you stay on target.',
+    image: require('../../../assets/onboarding4.png'),
   },
   {
     id: '3',
     title: 'Get AI-powered insights',
     description: 'Our AI analyzes your spending patterns and suggests ways to save more and spend smarter.',
-    image: require('../../assets/onboarding3.png'),
+    image: require('../../../assets/onboarding4.png'),
   },
   {
     id: '4',
     title: 'Have fun with challenges and rewards',
     description: 'Turn budgeting into a game with challenges, achievements, and rewards that keep you motivated.',
-    image: require('../../assets/onboarding4.png'),
+    image: require('../../../assets/onboarding4.png'),
   },
 ];
 

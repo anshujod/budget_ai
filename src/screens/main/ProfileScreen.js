@@ -10,6 +10,7 @@ import {
 import { StatusBar } from 'expo-status-bar';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS, TYPOGRAPHY, SPACING, SHADOWS } from '../../styles/theme';
+import { ROUTES } from '../../constants/appConstants';
 
 // Mock user data for demonstration
 const mockUserData = {
@@ -142,7 +143,7 @@ const ProfileScreen = ({ navigation }) => {
           
           <TouchableOpacity 
             style={styles.settingsItem}
-            onPress={() => navigation.navigate('Settings')}
+            onPress={() => navigation.navigate(ROUTES.SETTINGS)}
           >
             <MaterialCommunityIcons name="account-cog" size={24} color={COLORS.primary} style={styles.settingsIcon} />
             <Text style={styles.settingsText}>Account Settings</Text>
@@ -151,7 +152,7 @@ const ProfileScreen = ({ navigation }) => {
           
           <TouchableOpacity 
             style={styles.settingsItem}
-            onPress={() => navigation.navigate('Notifications')}
+            onPress={() => navigation.navigate(ROUTES.NOTIFICATIONS)}
           >
             <MaterialCommunityIcons name="bell-outline" size={24} color={COLORS.primary} style={styles.settingsIcon} />
             <Text style={styles.settingsText}>Notification Preferences</Text>

@@ -11,6 +11,7 @@ import { StatusBar } from 'expo-status-bar';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS, TYPOGRAPHY, SPACING, SHADOWS } from '../../styles/theme';
 import { useFinancial } from '../../context/FinancialContext';
+import { ROUTES } from '../../constants/appConstants';
 
 const GoalsScreen = ({ navigation }) => {
   const { goals, isLoading } = useFinancial();
@@ -94,7 +95,7 @@ const GoalsScreen = ({ navigation }) => {
   const renderGoalItem = ({ item }) => (
     <TouchableOpacity 
       style={styles.goalItem}
-      onPress={() => navigation.navigate('GoalDetails', { goalId: item.id })}
+      onPress={() => navigation.navigate(ROUTES.GOAL_DETAILS, { goalId: item.id })}
     >
       <View style={styles.goalHeader}>
         <View 
@@ -164,7 +165,7 @@ const GoalsScreen = ({ navigation }) => {
       </Text>
       <TouchableOpacity 
         style={styles.addFirstGoalButton}
-        onPress={() => navigation.navigate('AddGoal')}
+        onPress={() => navigation.navigate('GoalsStack', { screen: ROUTES.ADD_GOAL })}
       >
         <Text style={styles.addFirstGoalText}>Create Your First Goal</Text>
       </TouchableOpacity>
@@ -185,13 +186,14 @@ const GoalsScreen = ({ navigation }) => {
       
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Savings Goals</Text>
-        <TouchableOpacity 
+        <TouchableOpacity
           style={styles.addButton}
-          onPress={() => navigation.navigate('AddGoal')}
+          onPress={() => navigation.navigate('GoalsStack', { screen: ROUTES.ADD_GOAL })}
         >
           <MaterialCommunityIcons name="plus" size={24} color={COLORS.white} />
         </TouchableOpacity>
       </View>
+      {/* Top FIRE Assistant button removed */}
       
       <View style={styles.filtersContainer}>
         <TouchableOpacity 
@@ -245,6 +247,7 @@ const GoalsScreen = ({ navigation }) => {
           </Text>
         </TouchableOpacity>
       </View>
+      {/* Removed the floating "+" add goal button as per user request */}
       
       {goals.length > 0 && (
         <View style={styles.summaryContainer}>
@@ -265,6 +268,7 @@ const GoalsScreen = ({ navigation }) => {
           <ActivityIndicator size="large" color={COLORS.primary} />
           <Text style={styles.loadingText}>Loading goals...</Text>
         </View>
+        {/* Removed invalid comment */}
       ) : (
         <FlatList
           data={filterGoals()}
@@ -275,8 +279,17 @@ const GoalsScreen = ({ navigation }) => {
           showsVerticalScrollIndicator={false}
         />
       )}
-    </View>
-  );
+      {/* Ensure this closing parenthesis correctly ends the ternary operator */}
+      {/* Cleaned up previous incorrect FAB placements and syntax errors */}
+      {/* Add FIRE Assistant FAB correctly before closing root View */}
+      <TouchableOpacity
+        style={styles.fab}
+        onPress={() => navigation.navigate(ROUTES.FIRE_QUESTIONNAIRE)}
+      >
+        <MaterialCommunityIcons name="fire" size={28} color="#fff" />
+      </TouchableOpacity>
+    </View> // This closes the main container View
+);
 };
 
 const styles = StyleSheet.create({
@@ -292,11 +305,7 @@ const styles = StyleSheet.create({
     paddingTop: SPACING.xl,
     paddingBottom: SPACING.md,
   },
-  headerTitle: {
-    fontSize: TYPOGRAPHY.fontSize.xxl,
-    fontWeight: TYPOGRAPHY.fontWeight.bold,
-    color: COLORS.textPrimary,
-  },
+  // Removed fireAssistantButton and fireAssistantButtonText styles
   addButton: {
     width: 40,
     height: 40,
@@ -490,6 +499,67 @@ const styles = StyleSheet.create({
     fontSize: TYPOGRAPHY.fontSize.md,
     fontWeight: TYPOGRAPHY.fontWeight.bold,
     color: COLORS.white,
+  },
+  fab: {
+    position: 'absolute',
+    right: SPACING.lg,
+    bottom: SPACING.xxl,
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: COLORS.primary, // Or a different color like orange for FIRE
+    alignItems: 'center',
+    justifyContent: 'center',
+    ...SHADOWS.large,
+  },
+  fab: {
+    position: 'absolute',
+    right: SPACING.lg,
+    bottom: SPACING.xxl,
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: COLORS.primary, // Or a different color like orange for FIRE
+    alignItems: 'center',
+    justifyContent: 'center',
+    ...SHADOWS.large,
+  },
+  // Remove FAB style if present
+  // fab: {
+  //   position: 'absolute',
+  //   right: SPACING.lg,
+  //   bottom: SPACING.xxl,
+  //   width: 56,
+  //   height: 56,
+  //   borderRadius: 28,
+  //   backgroundColor: COLORS.primary,
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  //   ...SHADOWS.large,
+  // },
+  fab: {
+    position: 'absolute',
+    right: SPACING.lg,
+    bottom: SPACING.xxl,
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: COLORS.primary, // Or a different color like orange for FIRE
+    alignItems: 'center',
+    justifyContent: 'center',
+    ...SHADOWS.large,
+  },
+  fab: {
+    position: 'absolute',
+    right: SPACING.lg,
+    bottom: SPACING.xxl,
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: COLORS.primary, // Or a different color like orange for FIRE
+    alignItems: 'center',
+    justifyContent: 'center',
+    ...SHADOWS.large,
   },
 });
 

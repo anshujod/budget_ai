@@ -23,7 +23,9 @@ import ForgotPasswordScreen from '../screens/auth/ForgotPasswordScreen';
 import HomeScreen from '../screens/main/HomeScreen';
 import ExpensesScreen from '../screens/main/ExpensesScreen';
 import BudgetScreen from '../screens/main/BudgetScreen';
-import GoalsScreen from '../screens/main/GoalsScreen';
+import GoalsScreen from '../screens/goals/GoalsScreen';
+import FIREQuestionnaireScreen from '../screens/goals/FIREQuestionnaireScreen';
+import FIRERecommendationsScreen from '../screens/goals/FIRERecommendationsScreen';
 import ProfileScreen from '../screens/main/ProfileScreen';
 
 // Additional Screens (to be implemented)
@@ -109,7 +111,9 @@ const GoalsStack = () => (
     <Stack.Screen name={ROUTES.GOAL_DETAILS} component={GoalDetailsScreen} />
     <Stack.Screen name={ROUTES.ADD_GOAL} component={AddGoalScreen} />
     <Stack.Screen name={ROUTES.EDIT_GOAL} component={EditGoalScreen} />
-  </Stack.Navigator>
+   <Stack.Screen name={ROUTES.FIRE_QUESTIONNAIRE} component={FIREQuestionnaireScreen} />
+   <Stack.Screen name={ROUTES.FIRE_RECOMMENDATIONS} component={FIRERecommendationsScreen} />
+ </Stack.Navigator>
 );
 
 // Profile Stack
